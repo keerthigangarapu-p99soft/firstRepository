@@ -1,0 +1,14 @@
+.ac-model-card {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+/* Custom CSS to decrease image size and add margins */
+.ac-model-image {
+    max-width: 100px; /* Adjust the maximum width as needed */
+    max-height: 100px; /* Adjust the maximum height as needed */
+    margin: 10px; /* Add margin around the image */
+    width: 100%;
+}

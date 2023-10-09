@@ -1,0 +1,47 @@
+<aura:component >
+  
+    <aura:attribute name="studentName" type="string" default="keethu"/>
+    <c:demo1 firstnumber="234"/>
+    <div class ="divclassname" >
+    <h1>hello world</h1>
+    <h2>hi this keerthi </h2>
+    <h3>heading 3</h3>
+        // <p> hidhcsbjafskdjhfgasvdhcvsajdhv<br>sdgusygfsghcfgashdg</br></p>
+    <h4 class="classname">red</h4>
+    studentname:{!v.studentname}
+        <h5 class ="attributeclass">studentname:{!v.studentName}</h5>
+   
+   <ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+    
+    <ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+    
+    <dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+
+    <ul style="list-style-type:circle;">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+    
+    <ul style="list-style-type:square;">
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+    
+    </div>
+    
+</aura:component>

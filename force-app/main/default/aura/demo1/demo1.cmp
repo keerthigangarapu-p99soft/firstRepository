@@ -1,0 +1,50 @@
+<aura:component >
+<aura:attribute name="variable1" type="boolean" default="true"/>
+<aura:attribute name="variable2" type="boolean" default="false"/>
+<aura:attribute name="variable3" type="boolean" default="true"/>
+<aura:attribute name="variable4" type="boolean" default="false"/>
+    <aura:attribute name="var1" type="string" />
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+     <aura:attribute name="newAcc" type="Account" default="{'sobjecttype':'Account','name':'testAcoyunt'}" />
+    <h1> {!v.newAcc.name}</h1>
+    <h2> component variable value:{!v.var1}</h2>
+ 
+<!--Example of aura:if-->
+<aura:if isTrue="{!v.variable1}">
+    <div style="background-color:LightBlue">
+        This should be displayed as variable1 is true
+    </div>
+</aura:if>
+   
+    
+    <!--Example of aura:if with aura:set else attribute-->
+<aura:if isTrue="{!v.variable2}">
+    <div style="background-color:LightBlue">
+        This should not be displayed as variable2 is false so else part will execute.
+    </div>
+    <aura:set attribute="else">
+        <div style="background-color:LightBlue">
+            This should be displayed as if condition is not satisfied.
+        </div>
+    </aura:set>
+</aura:if>
+    
+    
+   
+    
+    <aura:attribute name = "firstnumber" type="integer" default="23"/>
+    <aura:attribute name = "secoundnumber" type="integer" default="10"/>
+    <aura:attribute name = "total" type="integer" />
+        <div class = "divclass">
+    {!v.firstnumber}+{!v.secoundnumber}={!v.total}
+    <br></br>
+    <ui:button label ="ADD" press="{!c.add}"/>
+    <ui:button label ="sub" press="{!c.sub}"/>
+    <ui:button label ="multipy" press="{!c.multipy}"/>
+    <ui:button label ="div" press="{!c.div}"/>
+     <ui:button label ="mod" press="{!c.mod}"/>
+    </div>
+    
+    
+    
+</aura:component>

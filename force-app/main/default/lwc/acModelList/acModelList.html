@@ -1,0 +1,30 @@
+<template>
+    <div class="slds-grid slds-wrap">
+        <!-- Loop through the list of AC models -->
+        <template for:each={models} for:item="model">
+            <div key={model.id} class="slds-col slds-size_1-of-1 slds-medium-size_1-of-2 slds-large-size_1-of-3">
+                <article class="slds-card">
+                    <div class="slds-card__header slds-grid">
+                        <div class="slds-media slds-media_center">
+                            <div class="slds-media__figure">
+                                <img src={model.imageUrl} alt={model.name} class="ac-model-image" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slds-card__body slds-card__body_inner">
+                        <h2 class="slds-text-heading_medium">{model.name}</h2>
+                        <p>{model.description}</p>
+                        <div class="slds-grid slds-wrap slds-grid_vertical-align-center">
+                            <div class="slds-col slds-size_1-of-2">
+                                <p class="slds-text-color_success">{model.rating} ({model.reviews} Reviews)</p>
+                            </div>
+                            <div class="slds-col slds-size_1-of-2">
+                                <p class="slds-text-heading_large slds-text-color_error">&#8377;{model.price}</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </template>
+    </div>
+</template>

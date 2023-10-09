@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title ='conditionalrendering'></lightning-card>
+    <lightning-button  label="click"  variant="brand"
+                                      onclick={onchlick}></lightning-button>
+        <lightning-input type="text" label="type text to see the daTA"  onkeyup={oninputchange}></lightning-input>                              
+<template if:true={isvisible}>
+    <div>welcome to video series </div>
+    </template>
+    <template if:true={inputtext}>
+        <div>hurray! u typed correctly </div>
+        </template>
+</template>

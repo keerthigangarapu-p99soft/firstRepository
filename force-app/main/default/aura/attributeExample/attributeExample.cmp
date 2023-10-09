@@ -1,0 +1,41 @@
+<aura:component  controller ="newApexclass" implements="force:hasRecordId,force:hassobjectName,flexipage:availableForAllPageTypes">
+    <aura:handler name ="init" value="{!this}" action ="{!c.doinit}"/>
+    
+    <div>
+    <c:quickcontact accountId="{!v.recordId}"/>
+    </div>
+    
+    
+        
+  <!--  <aura:attribute name ="whom" type="String" default="kertrthu"/>
+    <aura:attribute name ="age" type="Integer" default="22"/>
+    <aura:attribute name ="colorstring" type="string[]" default="['red','blue','yellow']"/>
+    <aura:attribute name ="colorlist" type="list" default="['red','blue','yellow']"/>
+    <aura:attribute name ="contactobj" type="contact" />
+    {!v.whom},{!v.age},{!v.colorstring[0]},{!v.colorlist[2]},
+    <lightning:input aura:id="testinput" label="enter age"/>
+
+    <lightning:button value="compomentmethods" label="clickme" onclick="{!c.doclick}"/>
+    <aura:iteration items="{!v.colorlist}" var="anyvar">
+        {!anyvar}
+    </aura:iteration>-->
+    
+    <aura:attribute name ="contactlist" type ="Contact[]" />
+    <div class="slds-p-around_small">
+        <div class="slds-grid slds-wrap">        
+        <aura:iteration items="{!v.contactlist}" var ="con">
+         <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+        <lightning:card title ="{!con.LastName}" footer="{!con.Email}" iconName="action:add_contact">
+            <aura:set attribute="actions">
+                <lightning:button  name="{!con.Id}" label="view details" variant ="brand" onclick="{!c.doredirect}"/>
+            </aura:set>
+             <p class="slds-p-horizontal_small">
+          {!con.FirstName} {!con.LastName}
+                 <br/>{!con.Phone} </p>          
+        </lightning:card>
+            
+      </div>
+    </aura:iteration>
+    </div>
+     </div>
+</aura:component>

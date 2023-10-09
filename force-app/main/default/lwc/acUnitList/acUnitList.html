@@ -1,0 +1,18 @@
+<template>
+    
+    <lightning-card>
+        <div>
+            <!-- Search and Filter Options -->
+            <div>
+                <lightning-input type="text" label="Search" value={searchTerm} onchange={handleSearch}></lightning-input>
+                <lightning-combobox label="Filter" value={selectedFilter} options={filterOptions} onchange={handleFilter}></lightning-combobox>
+            </div>
+    
+            <!-- AC Unit List -->
+            <lightning-datatable data={acUnits} columns={columns} key-field="Id"></lightning-datatable>
+        </div>
+    </lightning-card>
+
+
+
+</template>

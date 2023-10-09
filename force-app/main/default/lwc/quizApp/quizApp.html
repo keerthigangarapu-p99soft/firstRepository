@@ -1,0 +1,10 @@
+<template>
+    <lightning-card>
+        <template for:each={quizquestion} for:item="quiz">
+            <div key={quiz.id}>
+                {quiz.questionid}-{quiz.question}
+            </div>
+
+        </template>
+    </lightning-card>
+</template>

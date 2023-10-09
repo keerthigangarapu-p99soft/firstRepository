@@ -1,0 +1,160 @@
+<aura:component  Controller = "WrapperController">
+    <aura:attribute name="wrapperSample" type="List"/>
+    <aura:attribute name="AccountVar" type="List"/>
+    <aura:attribute name="contactsvar" type="List"/>
+     <aura:attribute name="oppvar" type="List"/>
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.conList}"/>   
+    
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate">ID</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate">Name</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" >Phone</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate">Annualrevenue</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate">Rating</div>
+                </th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <aura:iteration items="{!v.AccountVar}" var="acc">
+                
+                <tr class="slds-hint-parent">
+                    <td data-label="Account Name">
+                        <div class="slds-truncate">{!acc.Id}</div>
+                    </td>
+                    <td data-label="Close Date">
+                        <div class="slds-truncate">{!acc.Name}</div>
+                    </td>
+                    <td data-label="Prospecting">
+                        <div class="slds-truncate">{!acc.Phone}</div>
+                    </td>
+                    <td data-label="Confidence">
+                        <div class="slds-truncate">{!acc.AnnualRevenue}</div>
+                    </td>
+                    <td data-label="Amount">
+                        <div class="slds-truncate">{!acc.Rating}</div>
+                    </td>
+                    
+                </tr>
+                
+            </aura:iteration>
+            
+        </tbody>
+    </table>
+    
+
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate">ID</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate">Name</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" >Phone</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate">Annualrevenue</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate">Rating</div>
+                </th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <aura:iteration items="{!v.contactsvar}" var="con">
+                
+                <tr class="slds-hint-parent">
+                    <td data-label="Account Name">
+                        <div class="slds-truncate">{!con.Id}</div>
+                    </td>
+                    <td data-label="Close Date">
+                        <div class="slds-truncate">{!con.Name}</div>
+                    </td>
+                    <td data-label="Prospecting">
+                        <div class="slds-truncate">{!con.Phone}</div>
+                    </td>
+                     <td data-label="Confidence">
+                      <div class="slds-truncate">{!con.AnnualRevenue}</div>
+                    </td>
+                    <td data-label="Amount">
+                      <div class="slds-truncate">{!con.Rating}</div>
+                     </td>
+                    
+                </tr>
+                
+            </aura:iteration>
+            
+        </tbody>
+    </table>
+    
+    
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+        <thead>
+            <tr class="slds-line-height_reset">
+                <th class="" scope="col">
+                    <div class="slds-truncate">ID</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate">Name</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate" >Phone</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate">Amount</div>
+                </th>
+                <th class="" scope="col">
+                    <div class="slds-truncate">stage</div>
+                </th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            <aura:iteration items="{!v.oppvar}" var="o">
+                
+                <tr class="slds-hint-parent">
+                    <td data-label="Account Name">
+                        <div class="slds-truncate">{!o.Id}</div>
+                    </td>
+                    <td data-label="Close Date">
+                        <div class="slds-truncate">{!o.Name}</div>
+                    </td>
+                    <td data-label="Prospecting">
+                        <div class="slds-truncate">{!o.Phone}</div>
+                    </td>
+                    <td data-label="Confidence">
+                        <div class="slds-truncate">{!o.Amount}</div>
+                    </td>
+                    <td data-label="Amount">
+                        <div class="slds-truncate">{!o.stage}</div>
+                    </td>
+                    
+                </tr>
+                
+            </aura:iteration>
+            
+        </tbody>
+    </table>
+    
+
+    
+    
+    
+</aura:component>

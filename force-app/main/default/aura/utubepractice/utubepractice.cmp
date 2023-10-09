@@ -1,0 +1,21 @@
+<aura:component >
+	 <aura:handler name="init" value="{!this}" action= "{!c.doInit}" />
+    <aura:attribute name="arrydemo" type="string[]"
+                    default="['v1','v2','v3']"/>
+   	
+        <aura:attribute name="listdemo" type="List"
+                    default="['list1','list2','list3']"/>
+    <aura:attribute name="setdemo" type="set"
+                    default="['set1','set2','set3']"/>
+    <aura:attribute name="jsobject" type="object"/>
+    Array values:{!v.arrydemo[0]}
+    <hr></hr>
+    listvalues:{!v.listdemo[1]}
+    <hr></hr>
+    setvalues:{!v.setdemo[2]}
+    <hr></hr>
+    lengthoflist:{!v.listdemo.length}
+    <hr></hr>
+    jsobjectvalue:{!v.jsobject.name}-{!v.jsobject.email}
+    
+</aura:component>

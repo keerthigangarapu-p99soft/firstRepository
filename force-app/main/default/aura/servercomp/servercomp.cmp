@@ -1,0 +1,50 @@
+<aura:component controller="apexcontroller">
+	
+    
+    
+    
+    <aura:handler name="init"  value="{!this}" action="{!c.doinit}"/>
+    <aura:attribute name="contactlist" type="list"/>
+    <aura:iteration items="{!v.contactlist}" var ="con">
+        <tr>
+            <td>{!con.Name}</td>
+        </tr>
+    </aura:iteration>
+    
+    <table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+  <thead>
+    <tr class="slds-line-height_reset">
+      <th class="" scope="col">
+        <div class="slds-truncate" title="Contact Name">Contact Name</div>
+      </th>
+      </tr>
+        </thead>
+        <tbody>
+          <aura:iteration items="{!v.contactlist}" var ="con">  
+      <tr class="slds-hint-parent">
+          <td data-label="Contact Name">
+          <div class="slds-truncate" title="Cloudhub">{!con.Name}</div>
+          </td>
+              </tr>
+           </aura:iteration>
+            </tbody>
+        </table>
+                  
+     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <ui:button label = "callserver" press="{!c.echo}"/>
+    my namefromserver:{!v.firstname}
+                                                            
+</aura:component>

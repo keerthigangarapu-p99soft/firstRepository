@@ -1,0 +1,14 @@
+<template>
+    <div class="ac-model-details">
+        <h1>{model.Name} Details</h1>
+        <div class="model-image">
+            <img src={model.Image_URL__c} alt={model.Name} />
+        </div>
+        <div class="model-description">
+            <p>{model.Description__c}</p>
+        </div>
+
+        <!-- Add a button or link to navigate to the detail page -->
+        <lightning-button label="View Details" onclick={handleShowDetailsClick}></lightning-button>
+    </div>
+</template>

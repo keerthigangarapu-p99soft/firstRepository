@@ -1,0 +1,33 @@
+<aura:component controller ="uiopenformwrapper" > 
+	<aura:attribute name ="Gender" type="string" default="male" />
+
+<aura:attribute name="options" type="List" default="[
+
+                                                        {'label': 'Male', 'value': 'male'},
+
+                                                        {'label': 'Female', 'value': 'female'},
+
+                                                        {'label': 'Other', 'value': 'other'},
+
+                                                        ]"/>
+
+<lightning:card footer="Card Footer" title="Hello">
+
+<div class="row">
+
+<lightning:input aura:id="Name" name="Name" label="Person Name" value="" placeholder="Enter Your Name"/>
+
+<lightning:input type="number" aura:id="Phone" name="Phone" label="Enter a Phone number" />
+
+<lightning:combobox name="Gender" label="Gender" placeholder="Select Gender" options="{! v.options }" onchange="{! c.handleChange }"/>
+
+<lightning:textarea name="Address" aura:id="Address" label="Enter you address" />
+
+<lightning:button variant="destructive" label="Submit" title="Destructive action" onclick="{! c.handleClick }"/>
+
+</div>
+
+</lightning:card>
+
+
+</aura:component>

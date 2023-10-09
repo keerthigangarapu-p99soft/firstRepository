@@ -1,0 +1,10 @@
+.THIS .classname {
+    background:red;
+    color:yellow;
+}
+.THIS.divclassname{
+    background:pink;
+}
+.THIS .attributeclass{
+    background:blue;
+}

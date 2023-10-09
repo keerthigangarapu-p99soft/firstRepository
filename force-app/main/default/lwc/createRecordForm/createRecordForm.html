@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="create Accounts" icon-name="standard:Account">
+        <lightning-layout>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-card title="new Account" icon-name="standard:Account">
+<lightning-input label="enter account name" name="name" onchange={onaccchange}></lightning-input>
+<lightning-input label="enter phonenumber" name="phone" onchange={onaccphonechange}></lightning-input>
+<lightning-input label="enter fax number" name="fax" onchange={onacccfaxhange}></lightning-input>
+<lightning-input label="enter website" name="website" onchange={onaccwebchange}></lightning-input>
+<lightning-input label="enter billingcity" name="billingcity" onchange={onaccbillchange}></lightning-input>
+<lightning-button label="save record" onclick={handlesave}></lightning-button>
+
+                </lightning-card>
+
+            </lightning-layout-item>
+
+        </lightning-layout>
+    </lightning-card>
+</template>

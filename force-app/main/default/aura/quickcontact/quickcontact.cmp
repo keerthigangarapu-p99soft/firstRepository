@@ -1,0 +1,22 @@
+<aura:component controller="newApexclass" >
+    <aura:attribute name="accountId" type ="string"/>
+	<Aura:attribute name ="createcontact" type ="contact" default="{
+                                                                   sobjectName:'Contact',
+                                                                    FirstName:'',
+                                                                   LastName:'',
+                                                                   Email:'',
+                                                                   Phone:''
+                                                                   }"/>
+   
+    <div class="slds-p-around_small">
+    <lightning:input type ="text" aura:id="contactform" value="{!c.createcontact.FirstName}" label="FirstName"/>
+    <lightning:input type ="text" aura:id="contactform" value="{!c.createcontact.LastName}" label="LastName"/>
+    <lightning:input type ="email" aura:id="contactform" value="{!c.createcontact.Email}" label="Email"/>
+    <lightning:input type ="phone" aura:id="contactform" value="{!c.createcontact.Phone}" label="Phone"/>
+    
+    <lightning:button label="createcontact" variant="brand" onclick="{!c.creatcon}"/>
+    
+    </div>
+    
+    
+</aura:component>

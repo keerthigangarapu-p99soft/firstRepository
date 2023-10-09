@@ -1,0 +1,11 @@
+<template>
+    <div class="ac-model-details">
+        <h1>{model.Name} Details</h1>
+        <div class="model-image">
+            <img src={model.Image_URL__c} alt={model.Name} />
+        </div>
+        <div class="model-description">
+            <p>{model.Description__c}</p>
+        </div>
+    </div>
+</template>

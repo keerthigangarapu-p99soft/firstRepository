@@ -1,0 +1,14 @@
+<template>
+  <lightning-card title="calculator" >
+      <lightning-input label ="enter firstnumber" name="firnum"  onchange={fhandlechange}></lightning-input>
+      <lightning-input label ="enter secondnumber" name="secnum" onchange={shandlechange}></lightning-input>
+       <lightning-button label="ADD" onclick={add}></lightning-button>
+       <lightning-button label="SUB" onclick={sub}></lightning-button>
+       <lightning-button label="MULT" onclick={mult}></lightning-button>
+       <lightning-button label="DIV" onclick={div}></lightning-button>
+       result:{thirdnumber}
+       <template for:each={prevval} for:item="Item">
+        <p key={Item}> {Item}</p>
+         </template>
+  </lightning-card>
+</template>
