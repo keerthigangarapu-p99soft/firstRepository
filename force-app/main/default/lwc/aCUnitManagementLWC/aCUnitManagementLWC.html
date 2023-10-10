@@ -1,0 +1,56 @@
+<template>
+    <div>
+        <h2>AC Unit Management</h2>
+        <div>
+            <label for="operation">Select Operation:</label>
+            <select id="operation" onchange={handleOperation}>
+                <option value="add">Add AC Unit</option>
+                <option value="edit">Edit AC Unit</option>
+                <option value="delete">Delete AC Unit</option>
+            </select>
+        </div>
+
+        <template if:true={operation}>
+            <!-- Input fields for AC unit details -->
+            <lightning-input label="Location" value={location} onchange={handleLocationChange} if:true={operation === 'add'}></lightning-input>
+            <lightning-input label="Model" value={model} onchange={handleModelChange} if:true={operation === 'add'}></lightning-input>
+            <lightning-input type="date" label="Installation Date" value={installationDate} onchange={handleInstallationDateChange} if:true={operation === 'add'}></lightning-input>
+
+            <template if:true={operation === 'edit'}>
+                <!-- Dropdown for selecting AC unit to edit -->
+                <div>
+                    <label for="selectAcUnit">Select AC Unit to Edit:</label>
+                    <select id="selectAcUnit" onchange={handleEditSelection}>
+                        <template for:each={acUnits} for:item="acUnit">
+                            <option key={acUnit.Id} value={acUnit.Id}>{acUnit.Name}</option>
+                        </template>
+                    </select>
+                </div>
+                <!-- Edit fields here -->
+            </template>
+
+            <template if:true={operation === 'delete'}>
+                <!-- Dropdown for selecting AC unit to delete -->
+                <div>
+                    <label for="selectAcUnit">Select AC Unit to Delete:</label>
+                    <select id="selectAcUnit" onchange={handleDeleteSelection}>
+                        <template for:each={acUnits} for:item="acUnit">
+                            <option key={acUnit.Id} value={acUnit.Id}>{acUnit.Name}</option>
+                        </template>
+                    </select>
+                </div>
+                <!-- Delete confirmation and button here -->
+            </template>
+
+            <!-- Save and Delete buttons -->
+            <div>
+                <template if:true={operation !== 'delete'}>
+                    <lightning-button label="Save" onclick={handleSave}></lightning-button>
+                </template>
+                <template if:true={operation === 'delete'}>
+                    <lightning-button label="Delete" onclick={handleDelete}></lightning-button>
+                </template>
+            </div>
+        </template>
+    </div>
+</template>
