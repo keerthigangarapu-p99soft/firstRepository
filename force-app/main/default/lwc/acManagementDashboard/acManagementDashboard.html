@@ -1,0 +1,42 @@
+<template>
+    <div class="dashboard-container">
+        <!-- Dashboard Header -->
+        <header class="dashboard-header">
+            <h1>Air Conditioner Management Dashboard</h1>
+        </header>
+
+        <!-- Overview Section -->
+        <section class="overview-section">
+            <!-- Loop through AC units with maintenance records and display information -->
+            <template for:each={acUnitsWithMaintenance} for:item="unit">
+                <div key={unit.Id} class="ac-unit-card">
+                    <!-- AC Unit Location -->
+                    <p><strong>Location:</strong> {unit.Location__c}</p>
+
+                    <!-- AC Unit Model -->
+                    <p><strong>Model:</strong> {unit.ModelNumber__c}</p>
+
+                    <!-- AC Unit Installation Date -->
+                    <p><strong>Installation Date:</strong> {unit.Installation_Date__c}</p>
+
+                    <!-- Maintenance History -->
+                    <div class="maintenance-history">
+                        <p><strong>Maintenance History:</strong></p>
+                        <ul>
+                            <!-- Loop through related maintenance records for this unit -->
+                            <template for:each={unit.Maintenance_Records__r} for:item="record">
+                                <li key={record.Id}>
+                                    <div class="maintenance-record">
+                                        <p><strong>Date:</strong> {record.Date_of_Maintenance__c}</p>
+                                        <p><strong>Description:</strong> {record.Maintenance_cost__c}</p>
+                                        <!-- Add more fields from the maintenance record as needed -->
+                                    </div>
+                                </li>
+                            </template>
+                        </ul>
+                    </div>
+                </div>
+            </template>
+        </section>
+    </div>
+</template>

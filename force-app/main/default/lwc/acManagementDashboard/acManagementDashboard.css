@@ -1,0 +1,40 @@
+/* Styling for the dashboard container */
+.dashboard-container {
+    padding: 16px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the dashboard header */
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+/* Styling for AC unit cards */
+.ac-unit-card {
+    background-color: #fff;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for maintenance history list */
+.maintenance-history {
+    margin-top: 8px;
+    padding-left: 16px;
+}
+
+.maintenance-history ul {
+    list-style-type: square;
+}
+
+.maintenance-history li {
+    margin-bottom: 4px;
+}
+
+/* Additional CSS styling can be added as needed */
