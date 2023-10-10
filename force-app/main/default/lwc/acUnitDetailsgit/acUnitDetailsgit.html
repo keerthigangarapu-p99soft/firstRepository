@@ -1,0 +1,14 @@
+<template>
+    <div class="slds-box">
+        <h2>AC Unit Search</h2>
+        <lightning-input label="Location" value={locationFilter} onchange={handleLocationChange}></lightning-input>
+        <lightning-input label="Model" value={modelFilter} onchange={handleModelChange}></lightning-input>
+        <lightning-combobox
+            label="Maintenance Status"
+            options={maintenanceStatusOptions}
+            value={selectedMaintenanceStatus}
+            onchange={handleMaintenanceStatusChange}
+        ></lightning-combobox>
+        <lightning-button label="Search" onclick={handleSearch}></lightning-button>
+    </div>
+</template>
